@@ -1,0 +1,8 @@
+[user]
+	email = leanderfurumo@gmail.com
+	name = Leander Furumo
+	signingkey = DF6CB00EC30282D4FAA20A6326549B9C4206D60F
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
