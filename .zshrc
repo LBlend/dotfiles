@@ -31,6 +31,7 @@ alias ff="fastfetch"
 alias bat="batcat"
 alias cat="batcat --paging=never"
 alias ydl="yt-dlp --all-subs --embed-subs --embed-thumbnail --embed-chapters"
+alias gdl="gallery-dl --cookies-from-browser firefox"
 
 
 HIST_STAMPS="yyyy-mm-dd"
