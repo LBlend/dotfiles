@@ -30,6 +30,7 @@ alias find="fd"
 alias ff="fastfetch"
 alias bat="batcat"
 alias cat="batcat --paging=never"
+alias ydl="yt-dlp --all-subs --embed-subs --embed-thumbnail --embed-chapters"
 
 
 HIST_STAMPS="yyyy-mm-dd"
