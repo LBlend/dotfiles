@@ -1,7 +1,7 @@
 [user]
 	email = leander@furumo.eu
 	name = Leander Furumo
-	signingkey = D371824559EBCF930B67613E3F08030796C74755
+	signingkey = A38CADC3C5FC879DF0FC5E9A0DC67A403AB6D120
 [commit]
 	gpgsign = true
 [init]
