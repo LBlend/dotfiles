@@ -7,8 +7,8 @@
 [init]
 	defaultBranch = main
 
-[includeIf "gitdir:~/Documents/code/neuf/"]
-  path = .gitconfig.professional
+#[includeIf "gitdir:~/Documents/code/neuf/"]
+#  path = .gitconfig.professional
 
-[includeIf "gitdir:~/Documents/code/work/"]
-  path = .gitconfig.professional
+#[includeIf "gitdir:~/Documents/code/work/"]
+#  path = .gitconfig.professional
