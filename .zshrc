@@ -3,6 +3,7 @@ ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 plugins=(
   zsh-autosuggestions
+  fzf-tab
 )
 
 
