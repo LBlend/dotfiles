@@ -44,17 +44,6 @@ HIST_STAMPS="yyyy-mm-dd"
 export histcontrol=ignoreboth
 
 
-### oh-my-zsh bloat ###
-export ZSH="$XDG_DATA_HOME/oh-my-zsh"
-ZSH_THEME="robbyrussell"
-source $ZSH/oh-my-zsh.sh
-plugins=(
-  fzf-tab
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
-
-
 ### Aliases ###
 # Git
 alias ga="git add ."
@@ -83,3 +72,12 @@ alias gdl="gallery-dl --cookies-from-browser firefox"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
+
+
+### Plugins ###
+source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
+source /usr/share/zsh/plugins/zsh-auto-notify/auto-notify.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
