@@ -45,7 +45,7 @@ export histcontrol=ignoreboth
 
 
 ### oh-my-zsh bloat ###
-export ZSH="$HOME/.config/oh-my-zsh"
+export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 plugins=(
