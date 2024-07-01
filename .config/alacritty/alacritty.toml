@@ -1,0 +1,7 @@
+import = ["/home/leander/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[font.normal]
+family = "Firacode Nerd Font Mono"
