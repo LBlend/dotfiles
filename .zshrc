@@ -49,8 +49,9 @@ export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 plugins=(
-  zsh-autosuggestions
   fzf-tab
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 
@@ -82,4 +83,3 @@ alias gdl="gallery-dl --cookies-from-browser firefox"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
