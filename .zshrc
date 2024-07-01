@@ -31,6 +31,7 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME"/starship.toml
 export STARSHIP_CACHE="$XDG_CACHE_HOME"/starship
 export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
 # Home cleanup - zsh
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
 autoload -Uz compinit
