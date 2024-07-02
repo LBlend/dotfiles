@@ -66,6 +66,7 @@ alias bat="bat"
 alias cat="bat --paging=never"
 alias ydl="yt-dlp --all-subs --embed-subs --embed-thumbnail --embed-chapters"
 alias gdl="gallery-dl --cookies-from-browser firefox"
+alias mirrorphone="scrcpy --video-codec=h265 -m1920 --max-fps=60 --no-audio -K"
 
 
 ### Load Programs ###
