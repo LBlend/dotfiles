@@ -19,6 +19,7 @@ export DISCORD_USER_DATA_DIR="${XDG_DATA_HOME}"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export FFMPEG_DATADIR="$XDG_CONFIG_HOME"/ffmpeg
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export GPG_TTY=$(tty)
 export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
