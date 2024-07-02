@@ -71,7 +71,7 @@ alias gdl="gallery-dl --cookies-from-browser firefox"
 ### Load Programs ###
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
 
 
 ### Plugins ###
