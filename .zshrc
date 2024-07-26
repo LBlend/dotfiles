@@ -1,6 +1,6 @@
 ### Env / home cleanup ###
 # Default programs
-export BROWSER=firefox
+export BROWSER=librewolf
 export TERMINAL=alacritty
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
