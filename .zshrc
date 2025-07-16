@@ -40,6 +40,12 @@ autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 
 
+export ANDROID_HOME=~/Android
+export ANDROID_SDK_ROOT=~/Android
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+
 ### History ###
 HISTFILE="$XDG_STATE_HOME"/zsh/history
 HIST_STAMPS="yyyy-mm-dd"
@@ -63,6 +69,7 @@ alias ll="exa -lahg --git --group-directories-first -F"
 alias open="xdg-open"
 alias grep="rg --color=auto"
 alias find="fd"
+alias cp="fcp"
 alias ff="fastfetch"
 alias bat="bat"
 alias cat="bat --paging=never"
