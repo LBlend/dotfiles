@@ -36,7 +36,7 @@ misc {
 input {
     kb_layout = no
     follow_mouse = 1
-    sensitivity = 0.05
+    sensitivity = 0
 }
 
 
@@ -67,7 +67,7 @@ decoration {
 }
 
 animations {
-    enabled = true
+    enabled = yes
 
     bezier = myBezier, 0.05, 0.9, 0.1, 1.05
 
@@ -152,7 +152,3 @@ bind = $mainMod, mouse_up, workspace, e-1
 # Move/resize windows with mainMod + LMB/RMB and dragging
 bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
-
-xwayland {
-    enabled = true
-}
