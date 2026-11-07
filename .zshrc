@@ -30,6 +30,7 @@ export MANPAGER='nvim +Man!'
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state"
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export DISCORD_USER_DATA_DIR="${XDG_DATA_HOME}"
@@ -40,7 +41,6 @@ export GPG_TTY=$(tty)
 export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
-export NVM_DIR="$XDG_DATA_HOME"/nvm
 #export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/config
 export RUFF_CACHE_DIR=$XDG_CACHE_HOME/ruff
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
@@ -50,7 +50,6 @@ export WAKATIME_HOME="$XDG_CONFIG_HOME/wakatime"
 
 # Set-up icons for files/folders in terminal
 alias ls='eza -a --icons'
-alias ll='eza -al --icons'
 alias lt='eza -a --tree --level=1 --icons'
 ### Aliases ###
 # Git
@@ -71,7 +70,6 @@ alias grep="rg --color=auto"
 alias find="fd"
 alias du="dust"
 alias df="duf"
-alias bat="bat"
 alias cat="bat --paging=never"
 alias ff="fastfetch"
 alias ydl="yt-dlp --all-subs --embed-subs --embed-thumbnail --embed-chapters --sponsorblock-remove all"
@@ -81,7 +79,7 @@ alias mirrorphone="scrcpy --video-codec=h265 -m1920 --max-fps=60 --no-audio -K"
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
 
-HISTFILE=~/.zsh_history
+HISTFILE="$XDG_STATE_HOME"/zsh/history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
@@ -93,9 +91,10 @@ function restart-gpg() {
     echo "🔍 Checking for GPG lock files..."
     
     # Remove any existing lock files
-    if [ -d ~/.gnupg ]; then
-        find ~/.gnupg -name "*.lock" -delete 2>/dev/null
-        rm -f ~/.gnupg/public-keys.d/pubring.db.lock 2>/dev/null
+    local gnupg_dir="${GNUPGHOME:-$HOME/.gnupg}"
+    if [ -d "$gnupg_dir" ]; then
+        find "$gnupg_dir" -name "*.lock" -delete 2>/dev/null
+        rm -f "$gnupg_dir"/public-keys.d/pubring.db.lock 2>/dev/null
         echo "🗑️  Removed lock files"
     fi
     
@@ -112,6 +111,6 @@ function restart-gpg() {
     fi
 }
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+export NVM_DIR="$XDG_CONFIG_HOME"/nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
